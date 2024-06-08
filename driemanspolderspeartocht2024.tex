@@ -3,84 +3,224 @@
 \author{Eelco van Vliet}
 \date{8 juni 2024}
 \pagestyle{empty}
+\usepackage[dutch]{babel}
 \usepackage[top=30pt,bottom=30pt,left=48pt,right=46pt]{geometry}
 \usepackage{hyperref}
 \hypersetup{pdfborder = 0 0 0}
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{booktabs}
-\usepackage[skip=1ex]{caption}
+\usepackage[skip=1ex, figurename=Vraag]{caption}
+% Letters form word: MARSHMALLOWSFEESTJE!
+% VRAAG 1 Jupiter
+\newcommand{\locone}{52° 3'36N 4°26'00E}
+\newcommand{\urlone}{https://forms.gle/88Jf8wcjFSU8aojt8}
+\newcommand{\letterone}{A}
+\newcommand{\noteone}{Jupiter}
+% VRAAG 2 Honkbalknuppel
+\newcommand{\loctwo}{52° 3'45"N 4°26'11"E}
+\newcommand{\urltwo}{https://forms.gle/jwE6WMcVdYzMEdi86}
+\newcommand{\lettertwo}{S}
+\newcommand{\notetwo}{Honkbalknuppel}
+% VRAAG 3 Irish Kids
+\newcommand{\locthree}{52° 3'51"N 4°26'24"E}
+\newcommand{\urlthree}{https://forms.gle/kxh8LWZneB8L2Z3z6}
+\newcommand{\letterthree}{W}
+\newcommand{\notethree}{Irish Kids}
+% VRAAG 4 Heliumballon
+\newcommand{\locfour}{52° 3'59"N 4°26'31"E}
+\newcommand{\urlfour}{https://forms.gle/V9HNHxqCGrrNP5G88}
+\newcommand{\letterfour}{R}
+\newcommand{\notefour}{Heliumballon}
+% VRAAG 5
+\newcommand{\locfive}{52° 4'1"N 4°26'28"E}
+\newcommand{\urlfive}{https://example.com}
+\newcommand{\letterfive}{M}
+\newcommand{\notefive}{}
+% VRAAG 6
+\newcommand{\locsix}{52° 4'6"N 4°26'4"E}
+\newcommand{\urlsix}{https://example.com}
+\newcommand{\lettersix}{F}
+\newcommand{\notesix}{}
+% VRAAG 7
+\newcommand{\locseven}{52° 3'58"N   4°25'42"E}
+\newcommand{\urlseven}{https://example.com}
+\newcommand{\letterseven}{M}
+\newcommand{\noteseven}{}
+% VRAAG 8
+\newcommand{\loceight}{52° 4'10"N   4°25'23"E}
+\newcommand{\urleight}{https://example.com}
+\newcommand{\lettereight}{L}
+\newcommand{\noteeight}{}
+% VRAAG 9
+\newcommand{\locnine}{52° 4'12"N  4°25'14"E}
+\newcommand{\urlnine}{https://example.com}
+\newcommand{\letternine}{O}
+\newcommand{\notenine}{}
+% VRAAG 10
+\newcommand{\locten}{52° 4'15"N   4°25'7"E}
+\newcommand{\urlten}{https://example.com}
+\newcommand{\letterten}{E}
+\newcommand{\noteten}{}
+% VRAAG 11
+\newcommand{\loceleven}{52° 4'11"N   4°25'6"E}
+\newcommand{\urleleven}{https://example.com}
+\newcommand{\lettereleven}{S}
+\newcommand{\noteeleven}{}
+% VRAAG 12
+\newcommand{\loctwelve}{52° 4'10"N   4°25'1"E}
+\newcommand{\urltwelve}{https://example.com}
+\newcommand{\lettertwelve}{A}
+\newcommand{\notetwelve}{}
+% VRAAG 13
+\newcommand{\locthirteen}{52° 3'53"N   4°25'17"E}
+\newcommand{\urlthirteen}{https://example.com}
+\newcommand{\letterthirteen}{E}
+\newcommand{\notethirteen}{}
+% VRAAG 14
+\newcommand{\locfourteen}{52° 3'47"N   4°25'22"E}
+\newcommand{\urlfourteen}{https://example.com}
+\newcommand{\letterfourteen}{J}
+\newcommand{\notefourteen}{}
+% VRAAG 15
+\newcommand{\locfifteen}{52° 3'41"N   4°25'26"E}
+\newcommand{\urlfifteen}{https://example.com}
+\newcommand{\letterfifteen}{T}
+\newcommand{\notefifteen}{}
+% VRAAG 16
+\newcommand{\locsixteen}{52° 3'37"N   4°25'43"E}
+\newcommand{\urlsixteen}{https://example.com}
+\newcommand{\lettersixteen}{E}
+\newcommand{\notesixteen}{}
+% VRAAG 17
+\newcommand{\locseventeen}{52° 3'40"N   4°25'44"O}
+\newcommand{\urlseventeen}{https://example.com}
+\newcommand{\letterseventeen}{H}
+\newcommand{\noteseventeen}{}
+% VRAAG 18
+\newcommand{\loceighteen}{52° 3'41"N   4°25'56"E}
+\newcommand{\urleighteen}{https://example.com}
+\newcommand{\lettereighteen}{L}
+\newcommand{\noteeighteen}{}
+% VRAAG 19
+\newcommand{\locnineteen}{ 52° 3'37"N  4°25'59"E}
+\newcommand{\urlnineteen}{https://example.com}
+\newcommand{\letternineteen}{S}
+\newcommand{\notenineteen}{}
+
+
 \begin{document}
     \maketitle
-
-    Het te raden woord is: \emph{MARSHMALLOWS}.
-
-    \begin{table}
-        \caption{Vragenlijst}
         \begin{tabular}{llll}
             \toprule
+            \multicolumn{4}{l}{Het te raden woord is: \emph{MARSHMALLOWSFEESTJE!}} \\
             \textbf{Vraag} & \textbf{Letter} & \textbf{Locatie} & \textbf{Omschrijving} \\
             \midrule
             % VRAAG 1
-            \ref{fig:question1} & A &
-            \href{https://forms.gle/88Jf8wcjFSU8aojt8}{52°03'36N 4°26'00E} & Jupiter\\
-            % VRAAG 2
-            \ref{fig:question2} & S &
-            \href{https://forms.gle/jwE6WMcVdYzMEdi86}{52°03'45"N 4°26'11"E} & Honkbalknuppel\\
-            % VRAAG 3
-            \ref{fig:question3} & W &
-            \href{https://forms.gle/jwE6WMcVdYzMEdi86}{52°03'51"N 4°26'24"E} & bedenken \\
-            4                    & R               &                  &                       \\
-            5                    & M               &                  &                       \\
-            6                    & H               &                  &                       \\
-            7                    & M               &                  &                       \\
-            8                    & L               &                  &                       \\
-            9                    & O               &                  &                       \\
-            10                   & L               &                  &                       \\
-            11                   & S               &                  &                       \\
-            12                   & A               &                  &                       \\
+             \ref{fig:question1} & \letterone & \href{\urlone}{\locone} & \noteone \\
+%            % VRAAG 2
+            \ref{fig:question2} & \lettertwo & \href{\urltwo}{\loctwo} & \notetwo \\
+%            % VRAAG 3
+            \ref{fig:question3} & \letterthree & \href{\urlthree}{\locthree} & \notethree  \\
+%            % VRAAG 4
+            \ref{fig:question4} & \letterfour  & \href{\urlfour}{\locfour} & \notefour \\
+%            % VRAAG 5
+            \ref{fig:question5} & \letterfive  & \href{\urlfive}{\locfive} & \notefive \\
+%            % VRAAG 6
+            \ref{fig:question6} & \lettersix  & \href{\urlsix}{\locsix} & \notesix \\
+%            % VRAAG 7
+            \ref{fig:question7} & \letterseven  & \href{\urlseven}{\locseven} & \noteseven \\
+%            % VRAAG 8
+            \ref{fig:question8} & \lettereight  & \href{\urleight}{\loceight} & \noteeight \\
+%            % VRAAG 9
+            \ref{fig:question9} & \letternine  & \href{\urlnine}{\locnine} & \notenine \\
+%            % VRAAG 10
+            \ref{fig:question10} & \letterten  & \href{\urlten}{\locten} & \noteten \\
+%            % VRAAG 11
+            \ref{fig:question11} & \lettereleven  & \href{\urleleven}{\loceleven} & \noteeleven \\
+%            % VRAAG 12
+            \ref{fig:question12} & \lettertwelve  & \href{\urltwelve}{\loctwelve} & \notetwelve \\
+%            % VRAAG 13
+            \ref{fig:question13} & \letterthirteen  & \href{\urlthirteen}{\locthirteen} & \notethirteen \\
+%            % VRAAG 14
+            \ref{fig:question14} & \letterfourteen  & \href{\urlfourteen}{\locfourteen} & \notefourteen \\
+%            % VRAAG 15
+            \ref{fig:question15} & \letterfifteen  & \href{\urlfifteen}{\locfifteen} & \notefifteen \\
+%            % VRAAG 16
+            \ref{fig:question16} & \lettersixteen  & \href{\urlsixteen}{\locsixteen} & \notesixteen \\
+%            % VRAAG 17
+            \ref{fig:question17} & \letterseventeen  & \href{\urlseventeen}{\locseventeen} & \noteseventeen \\
+%            % VRAAG 18
+            \ref{fig:question18} & \lettereighteen  & \href{\urleighteen}{\loceighteen} & \noteeighteen \\
+%            % VRAAG 19
+            \ref{fig:question19} & \letternineteen  & \href{\urlnineteen}{\locnineteen} & \notenineteen \\
             \bottomrule
         \end{tabular}\label{tab:table}
-    \end{table}
-
 
 
     \begin{tabularx}{\columnwidth}{XXX}
         \includegraphics[width=\linewidth]{figures/qr_vraag_1}
-        \captionof{figure}{Q1 \@ 52°03 36N 4°26 00E}\label{fig:question1}
+        \captionof{figure}{\locone}\label{fig:question1}
         &
         \includegraphics[width=\linewidth]{figures/qr_vraag_2}
-        \captionof{figure}{Q1 \@  52°03'45"N 4°26'11"E}\label{fig:question2}
+        \captionof{figure}{\loctwo}\label{fig:question2}
         &
-        \includegraphics[width=\linewidth]{figures/qr_vraag_1}
-        \captionof{figure}{Q1 \@ 52°03 36N 4°26 00E}\label{fig:question3}
+        \includegraphics[width=\linewidth]{figures/qr_vraag_3}
+        \captionof{figure}{\locthree}\label{fig:question3}
         \\
-        \includegraphics[width=\linewidth]{figures/qr_vraag_1}
-        \captionof{figure}{Q1 \@ 52°03 36N 4°26 00E}\label{fig:question4}
+        \includegraphics[width=\linewidth]{figures/qr_vraag_4}
+        \captionof{figure}{\locfour}\label{fig:question4}
         &
-        \includegraphics[width=\linewidth]{figures/qr_vraag_1}
-        \captionof{figure}{Q1 \@ 52°03 36N 4°26 00E}\label{fig:question5}
+        \includegraphics[width=\linewidth]{example-image-b}
+        \captionof{figure}{\locfive}\label{fig:question5}
         &
-        \includegraphics[width=\linewidth]{figures/qr_vraag_1}
-        \captionof{figure}{Q1 \@ 52°03 36N 4°26 00E}\label{fig:question6}
+        \includegraphics[width=\linewidth]{example-image-c}
+        \captionof{figure}{\locsix}\label{fig:question6}
         \\
-        \includegraphics[width=\linewidth]{figures/qr_vraag_1}
-        \captionof{figure}{Q1 \@ 52°03 36N 4°26 00E}\label{fig:question7}
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\locseven}\label{fig:question7}
         &
-        \includegraphics[width=\linewidth]{figures/qr_vraag_1}
-        \captionof{figure}{Q1 \@ 52°03 36N 4°26 00E}\label{fig:question8}
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\loceight}\label{fig:question8}
         &
-        \includegraphics[width=\linewidth]{figures/qr_vraag_1}
-        \captionof{figure}{Q1 \@ 52°03 36N 4°26 00E}\label{fig:question9}
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\locnine}\label{fig:question9}
         \\
-        \includegraphics[width=\linewidth]{figures/qr_vraag_1}
-        \captionof{figure}{Q1 \@ 52°03 36N 4°26 00E}\label{fig:question10}
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\locten}\label{fig:question10}
         &
-        \includegraphics[width=\linewidth]{figures/qr_vraag_1}
-        \captionof{figure}{Q1 \@ 52°03 36N 4°26 00E}\label{fig:question11}
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\loceleven}\label{fig:question11}
         &
-        \includegraphics[width=\linewidth]{figures/qr_vraag_1}
-        \captionof{figure}{Q1 \@ 52°03 36N 4°26 00E}\label{fig:question122}
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\loctwelve}\label{fig:question12}
+        \\
+    \end{tabularx}
+
+    \clearpage
+    \begin{tabularx}{\columnwidth}{XXX}
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\locthirteen}\label{fig:question13}
+        &
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\locfourteen}\label{fig:question14}
+        &
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\locfifteen}\label{fig:question15}
+        \\
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\locsixteen}\label{fig:question16}
+        &
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\locseventeen}\label{fig:question17}
+        &
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\loceighteen}\label{fig:question18}
+        \\
+        \includegraphics[width=\linewidth]{example-image-a}
+        \captionof{figure}{\locnineteen}\label{fig:question19}
+        &
+        &
         \\
     \end{tabularx}
 \end{document}
